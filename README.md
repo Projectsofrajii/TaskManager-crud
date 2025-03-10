@@ -1,7 +1,22 @@
 # TaskManager-crud
   assessment-test CRUD operation with middleware(authentication)
 
-# user - created for the foreignkey reference with - authenticated user  
+# Project cloning and deployment 
+  activate .venv using on windows -> .\.venv\Scripts\activate
+  install pip packages using -> pip install -r requirements.txt
+# cd Project
+  check the database creation on mysql server
+  python manage.py makemigrations
+  python manage.py migrate
+
+# to run server 
+  python manage.py runserver
+
+# to test 
+  python manage.py test
+
+# user - 
+  created for the foreignkey reference with - authenticated user  
 # user1 creates -> 
   {"username":"raji","password":"userraji123"} 
 # sample jwt token is -> 
@@ -15,3 +30,4 @@
      path('api/schema/', SpectacularAPIView.as_view(), name='schema'),     # API Schema (JSON)    
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'), # Swagger UI    
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),    # Redoc UI
+

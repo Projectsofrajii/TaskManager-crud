@@ -87,7 +87,7 @@ DATABASES = {
         'USER':'root',
         'PASSWORD':'Admin@123',
         'TEST': {
-            'NAME': 'test_your_database_name',  # Ensure a fresh test DB
+            'NAME': 'test_task',  # Ensure a fresh test DB
         },
     },
 }
