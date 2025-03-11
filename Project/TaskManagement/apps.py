@@ -7,3 +7,4 @@ class TaskmanagementConfig(AppConfig):
 
     def ready(self):
         import TaskManagement.signals
+        
