@@ -117,12 +117,12 @@ class LatestTasksAPIView(APIView):
     @handle_exceptions
     def get(self, request):
         paginators = self.pagination_class ()
-        tasks = Task.objects.only("title", "created_at").order_by('-created_at')[:10]  
+        tasks = Task.objects.only("title", "created_at").order_by('-created_at')  
         pages = paginators.paginate_queryset(tasks,request, view=self) 
         serializer = TaskSerializer(pages,many=True)
         return paginators.get_paginated_response(serializer.data)
     
-class LatestTasksAPIViewss(APIView): # this is problematic question so applied limit 10
+class TaskListlimit10(APIView): # this is problematic question so applied limit 10
     permission_classes = [IsAuthenticated]
     pagination_class = TaskPagination  # Apply pagination
 
