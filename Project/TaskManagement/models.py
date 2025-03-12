@@ -10,9 +10,9 @@ class Task(models.Model):
         ('Pending', 'Pending'),
         ('In Progress', 'In Progress'),
         ('Completed', 'Completed'),
-    ]
+    ]  #[(key,value)]
 
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255,verbose_name="Project Title")
     title_id = models.CharField(max_length=45,unique=True,blank=True)
     description = models.TextField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
